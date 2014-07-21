@@ -1,0 +1,16 @@
+<?php
+
+$theme = array
+(
+	'name'=>'NibbleStan',
+	'description'=>'Bootstrap, Single Column, Multi-Device Support',
+	'notes'=>'This theme was built by converting the Free Stanley Bootstrap HTML Theme. Disqus and Facebook commments supported',
+	'author'=>'Leo Adhemar Tan',
+	'version'=>'1.0',
+	'last_update'=>'18/07/2014', // dd/mm/yyyy
+	'url'=>'http://www.leoadhemartan.com', // http://xxxxxxxxxxxxx
+	'template'=>array('blog'=>'default.bit', 'post'=>'default.bit', 'page'=>'default.bit'),
+	'version_supported'=>array('4.0','4.0.1') // Nibbleblog version supported
+);
+
+?>

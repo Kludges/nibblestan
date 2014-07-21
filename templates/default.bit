@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="<?php echo Blog::language() ?>" >
+<head>
+<?php
+	// Charset, title, description, keywords, robots, etc
+	echo Blog::meta_tags();
+
+	// Include CSS from theme
+	echo Blog::css(array('bootstrap.css', 'main.css', 'rainbow.css'));
+
+	// Include Jquery
+	echo Blog::jquery();
+
+	// Include Javascript from theme
+	echo Blog::javascript(array('bootstrap.min.js', 'rainbow-custom.min.js'));
+
+	// Include Favicon, default path: themes/css/img/favicon.ico
+	echo Blog::favicon();
+
+	// Plugins for <head></head>
+	foreach($plugins as $plugin)
+	{
+		echo $plugin->blog_head();
+	}
+?>
+</head>
+<body>
+	<!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+		<div class="container">
+			<div class="navbar-header">
+				  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+				  </button>
+				  <a class="navbar-brand" href="<?php echo Blog::url() ?>"><?php echo Blog::name() ?></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				  <ul class="nav navbar-nav navbar-right">
+						<li><a href="<?php echo Blog::url() ?>">Home</a></li>
+						<li><a href="#">About</a></li>					
+				  </ul>
+			</div><!--/.nav-collapse -->
+		</div>
+    </div>
+	<section id="main">
+		<!-- VIEW -->
+		<section>
+			<?php include(THEME_VIEWS.$layout['view']); ?>
+		</section>
+	</section>
+	
+	<div id="footer">
+		<div class="container">
+			<!-- PLUGINS -->
+		<?php
+			if(!empty($plugins))
+			{
+				echo '<div class="row">';
+
+				foreach($plugins_sidebar as $plugin)
+				{
+					echo '<div class="col-lg-4">';
+					echo '<div class="plugin-box '.$plugin->get_slug_name().'">';
+						echo '<h4 class="plugin-title">'.$plugin->database('title').'</h4>';
+						echo $plugin->blog_body();
+					echo '</div>';
+					echo '</div>';
+				}
+
+				echo '</div>';
+			}
+		?>
+		
+		</div>
+	</div>

@@ -1,0 +1,9 @@
+<div id="white">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<?php echo $Language->get('404_PAGE_NOT_FOUND') ?>
+			</div>
+		</div>
+	</div>
+</div>

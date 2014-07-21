@@ -1,0 +1,26 @@
+<div id="grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<p><bd><?php echo Post::published() ?></bd></p>
+				<h4><a href="<?php echo Post::permalink() ?>"><?php echo Post::title() ?></a></h4>
+				<div>
+				<?php echo Post::content() ?>
+				</div>
+				
+				<div>
+					<?php echo Post::tags() ?>
+				</div>
+				<span>
+					<a href="<?php echo Post::permalink() ?>"><?php echo $Language->get('permalink') ?></a>
+				</span>
+				<span>
+					<?php echo Post::comment_count_link() ?>
+				</span>
+				<span>
+					<a target="_blank" href="<?php echo Post::tweet_link() ?>">Tweet</a>
+				</span>
+			</div>
+		</div><!-- /row -->
+	</div> <!-- /container -->
+</div><!-- /grey -->

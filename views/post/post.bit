@@ -1,0 +1,15 @@
+<div id="grey">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2">
+				<p><bd><?php echo Post::published() ?></bd></p>
+				<h4>
+					<?php echo Post::title() ?>
+				</h4>	
+				<div>
+					<?php echo Post::content(true) ?>
+				</div>
+			</div>				
+		</div><!-- /row -->
+	</div> <!-- /container -->
+</div><!-- /grey -->
