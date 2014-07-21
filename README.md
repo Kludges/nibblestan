@@ -13,6 +13,6 @@ Basic features include:
 -  Tested on Nibbleblog 4.0.3
 -  Syntax Highlighting Support using Rainbow.js
 
-Nibbleblog is great if you just need a basic blog with. It's a flatfile blog written in PHP. It can be integrated with a Database if needed. 
+Nibbleblog is great if you just need a basic blog. It's a flatfile blog written in PHP. It can be integrated with a Database if needed. 
 
 [http://www.nibbleblog.com/](http://www.nibbleblog.com/ "Nibbleblog Website")
